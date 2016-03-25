@@ -10,6 +10,10 @@ class CreatePets < ActiveRecord::Migration
       t.text :location
       t.string :description
       t.string :category
+      t.string :price
+      t.string :name
+      t.string :short_description
+      t.string :view_count
 
       t.timestamps null: false
     end
