@@ -3,6 +3,13 @@ Rails.application.routes.draw do
   resources :pets
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
+
+  devise_scope :user do
+    get "sign_in", :to => "devise/sessions#new"
+    get "sign_up", :to => "devise/registrations#new"
+    get "sign_out", :to => "devise/sessions#destroy"
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
