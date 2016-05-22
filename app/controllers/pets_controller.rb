@@ -10,6 +10,7 @@ class PetsController < ApplicationController
   def index
     @pets = Pet.all
   end
+  
 
   # GET /pets/1
   # GET /pets/1.json
